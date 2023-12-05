@@ -8,8 +8,19 @@ pipeline {
     }
 
     stage('listfiles') {
-      steps {
-        sh 'ls -la'
+      parallel {
+        stage('listfiles') {
+          steps {
+            sh 'ls -la'
+          }
+        }
+
+        stage('') {
+          steps {
+            sh 'cd freecodecamp-data-analytics-with-python/ && ls -la'
+          }
+        }
+
       }
     }
 
