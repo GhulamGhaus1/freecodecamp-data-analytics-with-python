@@ -15,9 +15,9 @@ pipeline {
           }
         }
 
-        stage('') {
+        stage('new') {
           steps {
-            sh 'cd freecodecamp-data-analytics-with-python/ && ls -la'
+            sh 'cd FreeCodeCamp-Data-Analysis-with-Python-Course-main/ && ls -la'
           }
         }
 
